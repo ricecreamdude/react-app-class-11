@@ -1,12 +1,66 @@
+Number and name of feature: Class 13
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 7:47
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+<App>
+  <Header>
+  <SearchForm>
+  <Map>
+  <SearchResults>
+    <Result> -- should exist and be individually named for each set of API call results - for example:
+
+    <Yelp lat="x" long="x">
+    <MovieDB lat="x" long="x">
+
+<App>
+  Should contain all child components and manage the application state.
+  this.state = {
+    location: {}
+  };
+
+<Header>
+  Should contain an <h1> with the title of your application (City Explorer).
+  Should contain a <p> with the following text: “Enter a location below to learn about the weather, events, restaurants, movies filmed there, and more!”
+
+<SearchForm>
+  Should contain <form> that makes a request to capture the users location and stores that in the application state for other components to use.
+
+<Map>
+  Should use the geo-location data from youur <SearchForm> to display a Google Map with a pin on your location.
+
+<SearchResults>
+  Should contain a container to house your <Result> components.
+
+<Result>
+  Should contain a container with the data from your API call. This should be nested within a <SearchResults> parent component and each <Result> component should be individually created and named. Essentially, this means that you should have a component for each API. For example: <Yelp>, <MovieDB>, <DarkSky>, <EventBrite>, etc. Each one of these components should then render a <ul> with the data from that API.
+
+
+
+
+
+
+
+
+
+
+
+
+
 Number and name of feature: class-12
 
 Estimate of time needed to complete: 1.5 hours
 
 Start time: 5:51 PM
 
-Finish time: _____
+Finish time: 6:38 PM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 47 Minutes
 
 <Header>
   <Main>

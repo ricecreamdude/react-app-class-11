@@ -1,27 +1,22 @@
-import React, {Fragment, Component} from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
-import Search from './components/search';
+import SearchForm from './components/searchForm';
 import Header from './components/header';
 import Maps from './components/maps';
-import Results from './components/results';
+import SearchResults from './components/searchResults'
 
 
 class App extends Component{
 
   constructor(props){
     super(props)
-    this.state = {}
+    this.state = {
+      location: {}
+    }
   }
 
   render(){
-
-    let styles = {
-      results:{
-        textAlign: 'center',
-        margin: '0px auto'
-      }
-    }
 
     return (
       <div className="App">
@@ -29,15 +24,9 @@ class App extends Component{
           headerText="City Explorer"
           subText="Enter a location below to learn about the weather, events, restaurants, movies filmed there, and more!"
         />
-        <Search />
+        <SearchForm />
         <Maps />
-        <section style={styles.results}>
-          <Results />
-          <Results />
-          <Results />
-          <Results />
-          <Results />
-        </section>
+        <SearchResults />
       </div>
     );
   }
