@@ -31,12 +31,13 @@ class App extends Component{
         />
         <Search />
         <Maps />
-        <div style={styles.results}>
+        <section style={styles.results}>
           <Results />
           <Results />
           <Results />
           <Results />
-        </div>
+          <Results />
+        </section>
       </div>
     );
   }

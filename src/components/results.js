@@ -7,7 +7,7 @@ class Results extends Component{
     let styles = {
       resultStyle:{
         display: 'inline-block',
-        width: '20%',
+        width: '19%',
         height: '300px',
         // float: 'left',
         border: '1px solid black'        
