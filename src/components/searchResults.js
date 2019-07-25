@@ -5,7 +5,6 @@ import Results from './results'
 class SearchResults extends Component{
 
 
-
   render(){
     
     let styles = {
