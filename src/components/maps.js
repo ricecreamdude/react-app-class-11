@@ -9,8 +9,8 @@ class Maps extends Component{
     }
     return(
       <div style={styles}>
-        Hi I'm a map
-      </div>
+        {this.props.latitude}: {this.props.longitude}
+      </div>      
     )
   }
 }

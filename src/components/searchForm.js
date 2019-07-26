@@ -1,28 +1,39 @@
 import React, {Fragment, Component} from 'react';
 
-class Search extends Component{
+class SearchForm extends Component{
   constructor(props){
-    super(props);
-    this.state = {value: ''}
-    this.handleChange = this.handleChange.bind(this);
+    super(props)
+    this.state={
+      query: ''
+    }
   }
 
-  handleChange(e){
-    this.setState({value: e.target.value});
+  handleChange = (e) => {
+    let query = e.target.value
+    this.setState({query})
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.handleSubmit(this.state.query)
   }
 
   render(){
     return(
-      <Fragment>
+
+      <form onSubmit={this.handleSubmit}>
         <input 
           placeholder="Enter a location" 
           onChange={this.handleChange}
         />
-        <button>Submit</button>
-      </Fragment>
+        <button
+          onSubmit={this.handleSubmit}
+        >Submit</button>
+      </form>
+
     )
   }
 
 }
 
-export default Search
+export default SearchForm
